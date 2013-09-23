@@ -19,5 +19,22 @@
 #
 
 node.default['jenkins']['server']['install_method'] = "package"
+node.default['jenkins']['server']['plugins'] = [
+	'git',
+	'github',
+	'github-api',
+	'rundeck',
+	'jobConfigHistory',
+	'global-build-stats'
+]
 
-include_recipe "jenkins::server"
+critical_recipes = [
+  "rackops-rolebook",
+  "jenkins::server"
+]
+
+
+#Run critical recipes
+critical_recipes.each do | recipe |
+  include_recipe recipe
+end
