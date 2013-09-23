@@ -35,20 +35,20 @@ ruby_version = "1.9.3-p448"
 rbenv_ruby ruby_version
 
 # test-kitchen must currently be installed as a "--pre" since it's not released yet
-rbenv_gem "test-kitchen" do
-	ruby_version ruby_version
-	options "--pre"
-end
+#rbenv_gem "test-kitchen" do
+#	ruby_version ruby_version
+#	options { "0" => "--pre"}
+#end
 
-ruby_gems = [
-  "kitchen-openstack",
-  "berkshelf",
-  "foodcritic",
-  "vagrant"
-]
+#ruby_gems = [
+#  "kitchen-openstack",
+#  "berkshelf",
+#  "foodcritic",
+#  "vagrant"
+#]
 
-ruby_gems.each do | my_gem |
-  rbenv_gem my_gem do
-	ruby_version ruby_version
-  end
+#ruby_gems.each do | my_gem |
+#  rbenv_gem my_gem do
+#	ruby_version ruby_version
+#  end
 end

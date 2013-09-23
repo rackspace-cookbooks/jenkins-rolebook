@@ -17,5 +17,6 @@ platforms:
 
 suites:
 - name: default
-  run_list: ["recipe[jenkins-rolebook::master"]
+  run_list: ["recipe[jenkins-rolebook::master]","recipe[jenkins-rolebook::test-kitchen]"]
   attributes: {}
+
