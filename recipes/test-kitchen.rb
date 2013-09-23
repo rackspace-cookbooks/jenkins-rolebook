@@ -18,13 +18,15 @@
 # limitations under the License.
 #
 
-critical_recipes = [
+node.default['rbenv']['group_users'] = node['jenkins']['server']['user']
+
+kitchen_critical_recipes = [
   "rbenv",
   "rbenv::ruby_build"
 ]
 
 #Run critical recipes
-critical_recipes.each do | recipe |
+kitchen_critical_recipes.each do | recipe |
   include_recipe recipe
 end
 

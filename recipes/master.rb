@@ -22,6 +22,7 @@ node.default['jenkins']['server']['install_method'] = "package"
 node.default['jenkins']['server']['plugins'] = [
 	'git',
 	'github',
+	'ghprb',
 	'github-api',
 	'rundeck',
 	'jobConfigHistory',
