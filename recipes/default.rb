@@ -17,3 +17,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+critical_recipes = [
+  "rackops-rolebook",
+  "jenkins::server",
+  "rbenv",
+  "rbenv::ruby_build"
+]
+
+#Run critical recipes
+critical_recipes.each do | recipe |
+  include_recipe recipe
+end
