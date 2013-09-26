@@ -21,8 +21,8 @@
 node.default['rbenv']['group_users'] = node['jenkins']['server']['user']
 
 #Set up rbenv ruby version and install the needed gems
-ruby_version = "1.9.3-p448"
-rbenv_ruby ruby_version
+my_ruby_version = "1.9.3-p448"
+rbenv_ruby my_ruby_version
 
 # test-kitchen must currently be installed as a "--pre" since it's not released yet
 # this is not working currently due to the options
@@ -31,14 +31,14 @@ rbenv_ruby ruby_version
 #	options {["opts" => "pre"]}
 #end
 
-#ruby_gems = [
-#  "kitchen-openstack",
-#  "berkshelf",
-#  "foodcritic"
-#]
+ruby_gems = [
+  "kitchen-openstack",
+  "berkshelf",
+  "foodcritic"
+]
 
-#ruby_gems.each do | my_gem |
-#  rbenv_gem my_gem do
-#	ruby_version ruby_version
-#  end
-#end
+ruby_gems.each do | my_gem |
+  rbenv_gem my_gem do
+	ruby_version my_ruby_version
+  end
+end

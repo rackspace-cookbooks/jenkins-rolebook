@@ -19,6 +19,7 @@
 #
 
 node.default['jenkins']['server']['install_method'] = "war"
+default['jenkins']['http_proxy']['www_redirect'] = "enable"
 node.default['jenkins']['server']['plugins'] = [
 	'git',
 	'github',

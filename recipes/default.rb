@@ -29,3 +29,12 @@ critical_recipes = [
 critical_recipes.each do | recipe |
   include_recipe recipe
 end
+
+#Run non-critical recipes
+non_critical_recipes = [
+  "jenkins-rolebook::test-ktichen"
+]
+
+non_critical_recipes.each do | recipe |
+  include_recipe recipe
+end
