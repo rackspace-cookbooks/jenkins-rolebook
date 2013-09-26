@@ -18,7 +18,8 @@
 # limitations under the License.
 #
 
-node.default['rbenv']['group_users'] = node['jenkins']['server']['user']
+#node.default['rbenv']['group_users'] = ["#{node['jenkins']['server']['user']}"]
+node.default['rbenv']['group_users'] = ["jenkins"]
 
 #Set up rbenv ruby version and install the needed gems
 my_ruby_version = "1.9.3-p448"

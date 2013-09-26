@@ -21,6 +21,7 @@
 critical_recipes = [
   "rackops-rolebook",
   "jenkins::server",
+  "jenkins::proxy",
   "rbenv",
   "rbenv::ruby_build"
 ]
@@ -32,7 +33,7 @@ end
 
 #Run non-critical recipes
 non_critical_recipes = [
-  "jenkins-rolebook::test-ktichen"
+  "jenkins-rolebook::test-kitchen"
 ]
 
 non_critical_recipes.each do | recipe |

@@ -19,7 +19,8 @@
 #
 
 node.default['jenkins']['server']['install_method'] = "war"
-default['jenkins']['http_proxy']['www_redirect'] = "enable"
+node.default['jenkins']['http_proxy']['www_redirect'] = "enable"
+
 node.default['jenkins']['server']['plugins'] = [
 	'git',
 	'github',
@@ -29,3 +30,5 @@ node.default['jenkins']['server']['plugins'] = [
 	'jobConfigHistory',
 	'global-build-stats'
 ]
+
+node.override['nginx']['default_site_enabled'] = false
