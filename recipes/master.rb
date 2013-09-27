@@ -30,7 +30,8 @@ node.default['jenkins']['server']['plugins'] = [
 	'github-api',
 	'rundeck',
 	'jobConfigHistory',
-	'global-build-stats'
+	'global-build-stats',
+	'envinject'
 ]
 
 node.default['nginx']['default_site_enabled'] = false
