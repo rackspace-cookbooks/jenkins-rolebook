@@ -45,3 +45,12 @@ group "rbenv" do
 	members ["#{node['jenkins']['server']['user']}"]
 	action :manage
 end
+
+rbenv_execute "activate rbenv local 1.9.3-p448" do
+	command "rbenv local 1.9.3-p448"
+	cwd "#{node['jenkins']['server']['home']}"
+	creates "#{node['jenkins']['server']['home']}.ruby-version"
+	user node['jenkins']['server']['user']
+	group node['jenkins']['server']['user']
+	ruby_version my_ruby_version
+end
