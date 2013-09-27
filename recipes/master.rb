@@ -20,6 +20,8 @@
 
 node.default['jenkins']['server']['install_method'] = "war"
 node.default['jenkins']['http_proxy']['www_redirect'] = "enable"
+node.default['jenkins']['server']['host'] = "jenkins.rackops.org"
+node.default['jenkins']['http_proxy']['host_name'] = "jenkins.rackops.org"
 
 node.default['jenkins']['server']['plugins'] = [
 	'git',
@@ -31,4 +33,9 @@ node.default['jenkins']['server']['plugins'] = [
 	'global-build-stats'
 ]
 
-node.override['nginx']['default_site_enabled'] = false
+node.default['nginx']['default_site_enabled'] = false
+
+user "#{node['jenkins']['server']['user']}" do
+	shell "/bin/bash"
+	action :manage
+end

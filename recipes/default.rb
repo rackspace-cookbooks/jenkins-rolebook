@@ -20,6 +20,7 @@
 
 critical_recipes = [
   "rackops-rolebook",
+  "jenkins-rolebook::master",
   "jenkins::server",
   "jenkins::proxy",
   "rbenv",
@@ -37,5 +38,7 @@ non_critical_recipes = [
 ]
 
 non_critical_recipes.each do | recipe |
-  include_recipe recipe
+  include_recipe recipe do
+  	ignore_failure true
+  end
 end
