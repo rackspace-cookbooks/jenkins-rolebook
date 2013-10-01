@@ -18,6 +18,8 @@
 # limitations under the License.
 #
 
+#node.set[:rbenv][:git_revision] = "bdcc2e179008e6060a95412c67a9e3abdc7f24f3"
+
 #Set up rbenv ruby version and install the needed gems
 my_ruby_version = "1.9.3-p448"
 rbenv_ruby my_ruby_version
@@ -39,6 +41,13 @@ ruby_gems.each do | my_gem |
   rbenv_gem my_gem do
 	ruby_version my_ruby_version
   end
+end
+
+rbenv_execute "rbenv rehash" do
+	command "rbenv rehash"
+	cwd "#{node['jenkins']['server']['home']}"
+	user node['jenkins']['server']['user']
+	ruby_version my_ruby_version
 end
 
 group "rbenv" do

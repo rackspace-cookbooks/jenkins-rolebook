@@ -18,6 +18,7 @@
 # limitations under the License.
 #
 
+#jenkins settings
 node.default['jenkins']['server']['install_method'] = "war"
 node.default['jenkins']['http_proxy']['www_redirect'] = "enable"
 node.default['jenkins']['server']['host'] = "jenkins.rackops.org"
@@ -40,3 +41,6 @@ user "#{node['jenkins']['server']['user']}" do
 	shell "/bin/bash"
 	action :manage
 end
+
+#postfix settings
+node.default['postfix']['main']['myhostname'] = "jenkins.rackops.org"
