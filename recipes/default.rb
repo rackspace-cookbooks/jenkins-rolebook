@@ -25,7 +25,8 @@ critical_recipes = [
   "jenkins::proxy",
 #  "rbenv",
 #  "rbenv::ruby_build",
-  "postfix"
+  "postfix",
+  "rackspace-cloud-backup"
 ]
 
 #Run critical recipes
