@@ -23,8 +23,8 @@ critical_recipes = [
   "jenkins-rolebook::master",
   "jenkins::server",
   "jenkins::proxy",
-#  "rbenv",
-#  "rbenv::ruby_build",
+  "rbenv",
+  "rbenv::ruby_build",
   "postfix",
   "rackspace-cloud-backup"
 ]

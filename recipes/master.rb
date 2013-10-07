@@ -44,3 +44,7 @@ end
 
 #postfix settings
 node.default['postfix']['main']['myhostname'] = "jenkins.rackops.org"
+
+#backups
+node.default['rackspace_cloud_backup']['backup_locations']  = ["/var/lib/jenkins"]
+node.default['rackspace_cloud_backup']['rackspace_endpoint'] = "ord"
