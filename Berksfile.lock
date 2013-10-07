@@ -1,0 +1,88 @@
+{
+  "sources": {
+    "jenkins-rolebook": {
+      "path": "."
+    },
+    "jenkins": {
+      "locked_version": "1.0.0",
+      "git": "git://github.com/rackspace-cookbooks/jenkins.git",
+      "ref": "69b8a7130ebc94209cc87a70773b7260dd3c24d1"
+    },
+    "rbenv": {
+      "locked_version": "0.7.3",
+      "git": "git://github.com/fnichol/chef-rbenv.git",
+      "ref": "9afb4e5da2e6212504a12de3bbbd410cd96100f6"
+    },
+    "rackops-rolebook": {
+      "locked_version": "0.1.1",
+      "git": "git://github.com/rackops/rackops-rolebook.git",
+      "ref": "fd6ac022ad5cf938624c15dfb8180b556e24c744"
+    },
+    "rackspace-user": {
+      "locked_version": "0.1.5",
+      "git": "git://github.com/rackspace-cookbooks/rackspace-user.git",
+      "ref": "81b8d03af4be0810c0835503c84740f39f9b397d"
+    },
+    "postfix": {
+      "locked_version": "3.0.1",
+      "git": "git://github.com/rackspace-cookbooks/postfix.git",
+      "ref": "5e975b5a109b9d992adefa8891b5308558c3cce6"
+    },
+    "rackspace-cloud-backup": {
+      "locked_version": "0.3.2",
+      "git": "git://github.com/rackspace-cookbooks/rackspace-cloud-backup.git",
+      "ref": "5e1f3901ebdf69ce750f34460a65b411c4a26123"
+    },
+    "apt": {
+      "locked_version": "2.2.0"
+    },
+    "java": {
+      "locked_version": "1.12.0"
+    },
+    "windows": {
+      "locked_version": "1.9.0"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.4"
+    },
+    "runit": {
+      "locked_version": "1.1.4"
+    },
+    "build-essential": {
+      "locked_version": "1.4.0"
+    },
+    "yum": {
+      "locked_version": "2.3.0"
+    },
+    "apache2": {
+      "locked_version": "1.6.2"
+    },
+    "nginx": {
+      "locked_version": "1.7.0"
+    },
+    "ohai": {
+      "locked_version": "1.1.10"
+    },
+    "iptables": {
+      "locked_version": "0.12.0"
+    },
+    "ruby_build": {
+      "locked_version": "0.8.0"
+    },
+    "motd": {
+      "locked_version": "0.3.1"
+    },
+    "sudo": {
+      "locked_version": "2.1.2"
+    },
+    "chef-client": {
+      "locked_version": "3.0.4"
+    },
+    "cron": {
+      "locked_version": "1.2.4"
+    },
+    "ntp": {
+      "locked_version": "1.3.2"
+    }
+  }
+}
