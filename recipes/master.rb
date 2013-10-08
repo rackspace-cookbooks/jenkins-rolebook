@@ -23,6 +23,7 @@ node.default['jenkins']['server']['install_method'] = "war"
 node.default['jenkins']['http_proxy']['www_redirect'] = "enable"
 node.default['jenkins']['server']['host'] = "jenkins.rackops.org"
 node.default['jenkins']['http_proxy']['host_name'] = "jenkins.rackops.org"
+node.default['jenkins']['server']['version'] = "1.533"
 
 node.default['jenkins']['server']['plugins'] = [
 	'git',
@@ -48,4 +49,4 @@ node.default['postfix']['main']['myhostname'] = "jenkins.rackops.org"
 #backups
 node.default['rackspace_cloud_backup']['backup_locations']  = ["/var/lib/jenkins"]
 node.default['rackspace_cloud_backup']['rackspace_endpoint'] = "ord"
-node.default['backup_container'] = "jenkins-turbolift"
+node.default['rackspace_cloud_backup']['backup_container'] = "jenkins-turbolift"
