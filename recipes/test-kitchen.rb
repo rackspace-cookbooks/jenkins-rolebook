@@ -32,7 +32,8 @@ rbenv_ruby my_ruby_version
 ruby_gems = [
   "kitchen-openstack",
   "berkshelf",
-  "foodcritic"
+  "foodcritic",
+  "hub"
 ]
 
 ruby_gems.each do | my_gem |

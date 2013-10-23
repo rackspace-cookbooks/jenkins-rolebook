@@ -50,3 +50,9 @@ node.default['postfix']['main']['myhostname'] = "jenkins.rackops.org"
 node.default['rackspace_cloud_backup']['backup_locations']  = ["/var/lib/jenkins"]
 node.default['rackspace_cloud_backup']['rackspace_endpoint'] = "ord"
 node.default['rackspace_cloud_backup']['backup_container'] = "jenkins-turbolift"
+
+#nice to have packages
+package "tig" do
+	action :install
+end
+
