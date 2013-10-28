@@ -58,7 +58,7 @@ end
 
 #install github upstream merge script
 git "/var/lib/jenkins/jenkins-upstream-merge" do
-  repository "git@github.com/rackops/jenkins-upstream-merge"
+  repository "git://github.com/rackops/jenkins-upstream-merge.git"
   revision "master"
   user "jenkins"
   group "jenkins"
