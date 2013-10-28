@@ -21,7 +21,7 @@
 #Set up rbenv ruby version and install the needed gems
 my_ruby_version = "1.9.3-p448"
 
-if not Dir.exists?(node[:rbenv][:root_path] + "/" + my_ruby_version)
+if not Dir.exists?(node[:rbenv][:root_path] + "/versions/" + my_ruby_version)
 	rbenv_ruby my_ruby_version
 end
 
