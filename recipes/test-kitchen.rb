@@ -20,7 +20,10 @@
 
 #Set up rbenv ruby version and install the needed gems
 my_ruby_version = "1.9.3-p448"
-rbenv_ruby my_ruby_version
+
+unless Dir.exist?(node[:rbenv][:root_path] + my_ruby_version) do
+  rbenv_ruby my_ruby_version
+end
 
 # test-kitchen must currently be installed as a "--pre" since it's not released yet
 # this is not working currently due to the options
@@ -45,7 +48,6 @@ end
 rbenv_execute "rbenv rehash" do
 	command "rbenv rehash"
 	cwd "#{node['jenkins']['server']['home']}"
-	user node['jenkins']['server']['user']
 	ruby_version my_ruby_version
 end
 
