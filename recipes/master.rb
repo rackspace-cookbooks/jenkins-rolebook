@@ -56,3 +56,12 @@ package "tig" do
 	action :install
 end
 
+#install github upstream merge script
+git "/var/lib/jenkins/jenkins-upstream-merge"
+  repository "git@github.com/rackops/jenkins-upstream-merge"
+  revision "master"
+  user "jenkins"
+  group "jenkins"
+  action :sync
+end
+

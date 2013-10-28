@@ -36,7 +36,7 @@ end
 
 #Run non-critical recipes
 non_critical_recipes = [
-  "jenkins-rolebook::test-kitchen"
+#  "jenkins-rolebook::test-kitchen"
 ]
 
 non_critical_recipes.each do | recipe |
