@@ -57,7 +57,7 @@ package "tig" do
 end
 
 #install github upstream merge script
-git "/var/lib/jenkins/jenkins-upstream-merge"
+git "/var/lib/jenkins/jenkins-upstream-merge" do
   repository "git@github.com/rackops/jenkins-upstream-merge"
   revision "master"
   user "jenkins"
