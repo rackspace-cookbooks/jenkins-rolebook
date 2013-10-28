@@ -21,8 +21,8 @@
 #Set up rbenv ruby version and install the needed gems
 my_ruby_version = "1.9.3-p448"
 
-unless Dir.exist?(node[:rbenv][:root_path] + my_ruby_version) do
-  rbenv_ruby my_ruby_version
+if not Dir.exists?(node[:rbenv][:root_path] + "/" + my_ruby_version)
+	rbenv_ruby my_ruby_version
 end
 
 # test-kitchen must currently be installed as a "--pre" since it's not released yet
