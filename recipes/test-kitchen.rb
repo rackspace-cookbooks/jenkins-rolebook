@@ -20,8 +20,9 @@
 
 #Set up rbenv ruby version and install the needed gems
 my_ruby_version = "1.9.3-p448"
+my_ruby_path = node['rbenv']['root_path'] + "/versions/" + my_ruby_version
 
-if not Dir.exists?(node[:rbenv][:root_path] + "/versions/" + my_ruby_version)
+if !Dir.exists?(my_ruby_path)
 	rbenv_ruby my_ruby_version
 end
 
@@ -56,8 +57,8 @@ group "rbenv" do
 	action :manage
 end
 
-rbenv_execute "activate rbenv local 1.9.3-p448" do
-	command "rbenv local 1.9.3-p448"
+rbenv_execute "activate rbenv version" do
+	command "rbenv local " + my_ruby_version
 	cwd "#{node['jenkins']['server']['home']}"
 	creates "#{node['jenkins']['server']['home']}.ruby-version"
 	user node['jenkins']['server']['user']
