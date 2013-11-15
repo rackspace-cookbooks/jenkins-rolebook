@@ -37,7 +37,8 @@ ruby_gems = [
   "kitchen-openstack",
   "berkshelf",
   "foodcritic",
-  "hub"
+  "hub",
+  "rspec"
 ]
 
 ruby_gems.each do | my_gem |
