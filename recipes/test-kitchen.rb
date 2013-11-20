@@ -38,7 +38,8 @@ ruby_gems = [
   "berkshelf",
   "foodcritic",
   "hub",
-  "rspec"
+  "rspec",
+  "busser"
 ]
 
 ruby_gems.each do | my_gem |
